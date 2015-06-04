@@ -18,6 +18,14 @@ Given(/^I am on the new game page$/) do
   visit '/new_game'
 end
 
-Then(/^I should see the words "([^"]*)"$/) do |arg1|
-  expect(page.has_content?(arg1)).to be true
+# Then(/^I should see the words "([^"]*)"$/) do |arg1|
+#   expect(page.has_content?(arg1)).to be true
+# end
+
+# Then(/^I should see the words "([^"]*)" or "([^"]*)"$/) do |arg1, arg2|
+#   expect(page.has_content?(arg1 || arg2).to be true
+# end
+
+Then(/^I should see the words "([^"]*)" or "([^"]*)"$/) do |arg1, arg2|
+  page.should satisfy {|page| page.has_content?(arg1) or page.has_content?(arg2)}
 end
