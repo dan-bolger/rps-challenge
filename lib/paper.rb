@@ -8,4 +8,12 @@ class Paper
       :win
     end
   end
+
+  def paper?
+    true
+  end
+
+  def stone?
+    false
+  end
 end

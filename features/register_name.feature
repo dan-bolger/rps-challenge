@@ -8,5 +8,4 @@ Scenario: Putting the name in the form
   Then I should see "What's your name?"
   When I fill in "name" with "Dan"
   And I press "Play"
-  Then I should be on the game page
-  And I should see "CHOOSE YOUR WEAPON!"
+  Then I should see "CHOOSE YOUR WEAPON!"

@@ -6,5 +6,5 @@ Feature: Playing the game
   Scenario: Playing a move
     Given I am on the new game page
     Then I should see "CHOOSE YOUR WEAPON!"
-    And I press "ROCK"
-    Then I should see "You win!"
+    And I press "rock"
+    Then I should see the words "You win"

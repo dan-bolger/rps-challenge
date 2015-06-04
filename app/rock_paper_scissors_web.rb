@@ -10,4 +10,10 @@ class RockPaperScissorsWeb < Sinatra::Base
     erb :new_game
   end
 
+  post '/new_game' do
+    erb :new_game
+  end
+
+
+
 end
