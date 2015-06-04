@@ -19,22 +19,18 @@ class RockPaperScissorsWeb < Sinatra::Base
 
   end
 
-  # get '/stone' do
-  #   # stone = Stone.new
-  #   # paper = Paper.new
-  #   # stone.versus(paper)
-  #   erb :result
-  # end
-
   get '/result' do
-    p Stone.new.name
-    p @comp = [Stone.new, Paper.new, Scissors.new].sample
-    @result = if params[:move] = "stone"
-      Stone.new.versus(@comp)
-    elsif params[:move] = "paper"
-      Paper.new.versus(@comp)
+    @comp = [Stone.new, Paper.new, Scissors.new].sample
+    p @comp
+    if params[:move] == "stone"
+      @result = Stone.new.versus(@comp)
+      p @comp
+    elsif params[:move] == "paper"
+      @result = Paper.new.versus(@comp)
+      p @comp
     else
-      Scissors.new.versus(@comp)
+      @result = Scissors.new.versus(@comp)
+      p @comp
     end
 
     erb :result

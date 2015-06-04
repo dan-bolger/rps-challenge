@@ -26,6 +26,6 @@ end
 #   expect(page.has_content?(arg1 || arg2).to be true
 # end
 
-Then(/^I should see the words "([^"]*)" or "([^"]*)"$/) do |arg1, arg2|
-  page.should satisfy {|page| page.has_content?(arg1) or page.has_content?(arg2)}
+Then(/^I should see the words "([^"]*)" or "([^"]*)" or "([^"]*)"$/) do |arg1, arg2, arg3|
+  page.should satisfy {|page| page.has_content?(arg1) or page.has_content?(arg2) or page.has_content?(arg3)}
 end

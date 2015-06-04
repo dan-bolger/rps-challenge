@@ -7,5 +7,5 @@ Feature: Playing the game
     Given I am on the new game page
     Then I should see "CHOOSE YOUR WEAPON!"
     And I press "stone"
-    Then I should see the words "You win" or "You lose"
+    Then I should see the words "You win" or "You lose" or "It's a draw!!!!!"
 
