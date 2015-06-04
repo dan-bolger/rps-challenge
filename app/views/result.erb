@@ -1,1 +1,22 @@
+
+
+<%if @result == :win %>
+
+<H1>You win</H1>
+
+<%elsif @result == :loss%>
+
 <H1>You lose</H1>
+
+
+<%else @result == :draw%>
+
+<H1>It's a draw!!!!!</H1>
+
+
+<%end%>
+
+
+ <H1>
+ <%= "(the other player did a #{@comp.name})" %>
+ </H1>

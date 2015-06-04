@@ -1,4 +1,11 @@
 class Paper
+
+  attr_reader :name
+
+  def initialize
+    @name = "paper"
+  end
+
   def versus move
     if move.class == Paper
       :draw
