@@ -16,7 +16,7 @@ describe Scissors do
     expect(scissors.versus(paper)).to eq :win
   end
 
-    it 'should declare a loss when playing against stpme' do
+    it 'should declare a loss when playing against stone' do
     scissors = Scissors.new
     stone = Stone.new
     expect(scissors.versus(stone)).to eq :loss
